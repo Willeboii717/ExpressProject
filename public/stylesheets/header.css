@@ -1,0 +1,45 @@
+.headerMainGrid {
+  background: #55C3A0;
+  padding-top: 0%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+  justify-items: center;
+
+
+  border: 1px solid rgba(0, 0, 0, 0.8);
+
+  min-height: 8em;
+}
+
+.loginItem {
+  background-color: #BDEDE0;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+
+  width: 10em;
+  border-radius: 15%;
+}
+
+.titleTextItem {
+  font-weight: bolder;
+  font-size: xx-large;
+
+  grid-column: 2;
+}
+
+.uploadAndCartGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  grid-gap: 3px;
+  width: 15em;
+  
+}
+
+.uploadAndCartItem {
+  background-color: #BDEDE0;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 15%;
+}

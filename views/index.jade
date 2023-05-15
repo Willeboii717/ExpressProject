@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/homepage.css')
+    link(rel='stylesheet', href='/stylesheets/header.css')
+    link(rel='stylesheet', href='/stylesheets/searchbar.css')
+    link(rel='stylesheet', href='/stylesheets/footer.css')
+    link(rel='stylesheet', href='/stylesheets/3x3Image.css')
+  body
+    // Main Grid
+    .mainWrapper
+      // Header
+      .headerMainGrid
+        .loginItem
+          a(href='html\notIndex.html') Login
+        .titleTextItem  Bothniabladet 
+        .uploadAndCartGrid
+          .uploadAndCartItem  Ladda Upp 
+          .uploadAndCartItem  Kundvagn 
+      // Search
+      .searchBar
+        .gridItemSearch
+          input(type='text' placeholder='Sök på en bild!')
+      // Bilder
+      .imgaeGrid
+        .imageItem
+          img(src='/images/nature2.jpg' alt='Image 1')
+        .imageItem
+          img(src='/images/nature3.jpg' alt='Image 1')
+        .imageItem
+          img(src='/images/nature4.jpg' alt='Image 1')
+        .imageItem
+          img(src='/images/nature5.jpg' alt='Image 1')
+        .imageItem
+          img(src='/images/nature6.jpg' alt='Image 1')
+        .imageItem
+          img(src='/images/nature2.jpg' alt='Image 1')
+      // Footer
+      .footerMainGrid
+        .phoneItem
+          .phoneTitle  Telefon:
+          br
+          a(href='tel:070111-12 34') 070111-12 34
+          br
+          a(href='0920-12 34 56') 0920-12 34 56
+          br
+        .tagTitleLineItem
+          .tagTitle Bothniabladet
+          br
+          .tagLine Norrbottens Bläckigaste Hemsida
+        .adressItem
+          .adressTitle Adress 
+          br
+          |                 Bothniavägen 5 (Kontor)
+          br
+          |                 Pressvägen 9 (Lager)

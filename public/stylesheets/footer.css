@@ -1,0 +1,46 @@
+.footerMainGrid {
+    background: #55C3A0;
+    padding-top: 0%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+
+    min-height: 6em;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.phoneItem {
+    grid-column: 1;
+}
+
+.phoneTitle {
+    font-size: large;
+    font-weight: bold;
+}
+
+.tagTitleLineItem {
+    grid-column: 2;
+}
+
+.tagTitle {
+    font-size: xx-large;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.tagLine {
+    font-size: large;
+    font-weight: normal;
+}
+
+.adressItem {
+    grid-column: 3;
+}
+
+.adressTitle {
+    font-size: large;
+    font-weight: bold;
+}
