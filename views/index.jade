@@ -15,8 +15,9 @@ html(lang='en')
       // Header
       .headerMainGrid
         .loginItem
-          a(href='html\notIndex.html') Login
-        .titleTextItem  Bothniabladet 
+          a(href='/specificView') Login
+        .titleTextItem
+          a(href='/index') Bothniabladet
         .uploadAndCartGrid
           .uploadAndCartItem  Ladda Upp 
           .uploadAndCartItem  Kundvagn 
@@ -25,9 +26,10 @@ html(lang='en')
         .gridItemSearch
           input(type='text' placeholder='Sök på en bild!')
       // Bilder
-      .imgaeGrid
+      .imageGrid
         .imageItem
-          img(src='/images/nature2.jpg' alt='Image 1')
+          a(href='/specificView')
+            img(src='/images/nature2.jpg' alt='Image 1')
         .imageItem
           img(src='/images/nature3.jpg' alt='Image 1')
         .imageItem

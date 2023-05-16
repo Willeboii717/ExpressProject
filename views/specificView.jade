@@ -1,0 +1,85 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/homepage.css')
+    link(rel='stylesheet', href='/stylesheets/header.css')
+    link(rel='stylesheet', href='/stylesheets/footer.css')
+    link(rel='stylesheet', href='/stylesheets/specificView.css')
+  body
+    // Main Grid
+    .mainWrapper
+      // Header
+      .headerMainGrid
+        .loginItem
+          a(href='/specificView') Login
+        .titleTextItem
+          a(href='/index') Bothniabladet
+        .uploadAndCartGrid
+          .uploadAndCartItem  Ladda Upp 
+          .uploadAndCartItem  Kundvagn 
+      // Content
+      .contentGrid
+        .titleItem Kvällshimmel Marsdag
+        .imageItem
+          img(src='/images/nature2.jpg' alt='Image 1')
+        .descriptionItem
+          | En vacker bild på solnedgången en kväll i mars vid motorväg 45, 
+          br
+          |                 strax utanför Racksta på Fårö 
+          br
+          br
+          br
+          |                 Fotograf: David Davidsson
+          br
+          |                 Licens: 3 tillgängliga
+          br
+          br
+          |                 Kategori: Natur
+          br
+          |                 Underkategori: Solnedgång, Himmel, Mars
+        .priceItem
+          | Pris:
+          br
+          |                 500Kr
+        .cartAndOptionItem
+          .variantItem
+            select#variant(name='variant')
+              option(value='original') Original
+              option(value='röd') Röd
+              option(value='cropped') Cropped
+          .cartItem Lägg till i Kundvagn
+        .detailsItem
+          | Upplösning: 1400x1000
+          br
+          |                 Densitet: 50 ppi
+          br
+          |                 Format: JPEG
+          br
+          |                 Storlek: 52KB
+          br
+          |                 Datum: 2023-02-05
+          br
+          |                 Kamera: Nokia 3310
+        .mapItem Karta
+      // Footer
+      .footerMainGrid
+        .phoneItem
+          .phoneTitle  Telefon:
+          br
+          a(href='tel:070111-12 34') 070111-12 34
+          br
+          a(href='0920-12 34 56') 0920-12 34 56
+          br
+        .tagTitleLineItem
+          .tagTitle Bothniabladet
+          br
+          .tagLine Norrbottens Bläckigaste Hemsida
+        .adressItem
+          .adressTitle Adress 
+          br
+          |                 Bothniavägen 5 (Kontor)
+          br
+          |                 Pressvägen 9 (Lager)
