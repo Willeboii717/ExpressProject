@@ -51,19 +51,10 @@ html(lang='en')
               option(value='röd') Röd
               option(value='cropped') Cropped
           .cartItem Lägg till i Kundvagn
-        .detailsItem
-          | Upplösning: 1400x1000
-          br
-          |                 Densitet: 50 ppi
-          br
-          |                 Format: JPEG
-          br
-          |                 Storlek: 52KB
-          br
-          |                 Datum: 2023-02-05
-          br
-          |                 Kamera: Nokia 3310
-        .mapItem Karta
+        .detailsItem #{variable}
+        .mapItem
+          a(href="getShit")
+            button(type="button" onclick="logConsoleButton()") Button 
       // Footer
       .footerMainGrid
         .phoneItem
@@ -83,3 +74,5 @@ html(lang='en')
           |                 Bothniavägen 5 (Kontor)
           br
           |                 Pressvägen 9 (Lager)
+
+script(src='/javascripts/button.js')
