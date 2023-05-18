@@ -34,8 +34,15 @@ const connection = mysql.createConnection({
         I DB för att fungera
     */ 
 })
+var test = require("./dbConn");
+
 
 app.get('/getShit', function(req, res, next){
+  test.main();
+  next();
+});
+
+/*app.get('/getShit', function(req, res, next){
   console.log("Checkpoint 1");
   connection.query("SELECT * FROM kund", function(err, result, fields) {
   console.log(result);
@@ -43,10 +50,9 @@ app.get('/getShit', function(req, res, next){
   res.render('specificView', {variable: data});
   next();
 
-  //Gör riktigt sök
   });
 });
-
+*/
 
 
 app.use('/', indexRouter);

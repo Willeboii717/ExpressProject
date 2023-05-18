@@ -1,6 +1,6 @@
 
-async function helloWorld() {
+function helloWorld() {
     var string = "Hello World";
     return string;
 }
-module.exports = helloWorld();
+module.exports = { helloWorld };
