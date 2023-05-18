@@ -5,8 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
-
-const mysql = require('mysql');
+var mysql = require('mysql');
 var fs = require("fs");
 
 var indexRouter = require('./routes/index');
@@ -25,15 +24,27 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-var db = require("./dbConn");
-app.use(db.fuck);
+const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "password",
+    database: "bothniabladet"
+    /* Behöver köra 
+        ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'; flush privileges;
+        I DB för att fungera
+    */ 
+})
 
 app.get('/getShit', function(req, res, next){
-  console.log("Checkpoint Post");
-  console.log(db.fuck());
+  console.log("Checkpoint 1");
+  connection.query("SELECT * FROM kund", function(err, result, fields) {
+  console.log(result);
+  var data = JSON.stringify(result)
+  res.render('specificView', {variable: data});
+  next();
 
-  //var data = JSON.stringify(result)
-  //res.render('specificView', {variable: data});
+  //Gör riktigt sök
+  });
 });
 
 

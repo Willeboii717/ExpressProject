@@ -1,5 +1,5 @@
-module.exports = {
-    test: function main() {
+module.exports = {/* 
+   test: function main() {
     const mysql = require('mysql');
     const connection = mysql.createConnection({
         host: "localhost",
@@ -9,7 +9,7 @@ module.exports = {
         /* Behöver köra 
             ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'; flush privileges;
             I DB för att fungera
-        */
+        *//* 
     })
     
     connection.connect((err) => {
@@ -24,7 +24,7 @@ module.exports = {
         console.log(result);
     });
 },
-
+*/
 fuck: async function helloWorld() {
     var string = "Hello World";
     return string;
