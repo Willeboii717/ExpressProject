@@ -25,23 +25,30 @@ html(lang='en')
       // Search
       .searchBar
         .gridItemSearch
-           input(id='searchbar' type='text' placeholder='Sök på en bild!')
+          form#form(role='search')
+            input#query(type='search' name='q' placeholder='Search...' aria-label='Search through site content')
+            button Search
+
       // Bilder
       .imageGrid
-      .picutures
           .imageItem
             a(href='/specificView')
-              img(src='/images/nature2.jpg' alt='Image 1')
+              #{image1}
           .imageItem
-            img(src='/images/nature3.jpg' alt='Image 1')
+            a(href='/specificView')
+              #{image2}
           .imageItem
-            img(src='/images/nature4.jpg' alt='Image 1')
+            a(href='/specificView')
+              #{image3}
           .imageItem
-            img(src='/images/nature5.jpg' alt='Image 1')
+            a(href='/specificView')
+              #{image4}
           .imageItem
-            img(src='/images/nature6.jpg' alt='Image 1')
+            a(href='/specificView')
+              #{image5}
           .imageItem
-            img(src='/images/nature2.jpg' alt='Image 1')
+            a(href='/specificView')
+              #{image6}
       // Footer
       .footerMainGrid
         .phoneItem
@@ -61,3 +68,4 @@ html(lang='en')
           |                 Bothniavägen 5 (Kontor)
           br
           |                 Pressvägen 9 (Lager)
+script(src="/public/javascripts/searchClientside.js") 
