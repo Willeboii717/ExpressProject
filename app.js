@@ -31,6 +31,7 @@ app.get("/index?q=", function(req, res){
   console.log('id: ' + req.query.id);
   next();
 });
+//Få den här skiten to go, sen for loop för att lägga till bilder typ, potentiellt ska va i router
 
 /*
 app.get('/getShit', async function(req, res, next){
