@@ -21,14 +21,12 @@ html(lang='en')
           a(href='/index') Bothniabladet
         .uploadAndCartGrid
           .uploadAndCartItem  Ladda Upp 
-          .uploadAndCartItem  Kundvagn 
+          .uploadAndCartItem  Kundvagn
       // Search
       .searchBar
         .gridItemSearch
-          form#form(role='search')
-            input#query(type='search' name='q' placeholder='Search...' aria-label='Search through site content')
-            button Search
-
+            form(action='/?' method='get')
+              input#query(type='search' name='q' placeholder='Search...' aria-label='Search through site content')
       // Bilder
       .imageGrid
           .imageItem
@@ -68,4 +66,4 @@ html(lang='en')
           |                 Bothniavägen 5 (Kontor)
           br
           |                 Pressvägen 9 (Lager)
-script(src="/public/javascripts/searchClientside.js") 
+script(src="/javascripts/searchClientside.js") 

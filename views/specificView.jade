@@ -53,8 +53,8 @@ html(lang='en')
           .cartItem Lägg till i Kundvagn
         .detailsItem #{variable}
         .mapItem
-          a(href="getShit")
-            button(type="button" onclick="logConsoleButton()") Button 
+          form(action='/getShit' method='get')
+            button(type='submit') Submit Button 
       // Footer
       .footerMainGrid
         .phoneItem
@@ -74,5 +74,4 @@ html(lang='en')
           |                 Bothniavägen 5 (Kontor)
           br
           |                 Pressvägen 9 (Lager)
-
-script(src='/javascripts/button.js')
+script(src="/javascripts/searchClientside.js")

@@ -6,8 +6,7 @@ var logger = require('morgan');
 var mysql = require('mysql');
 var fs = require("fs");
 
-var indexRouter = require('./routes/index');
-var specificViewRouter = require('./routes/specificView');
+
 
 var app = express();
 
@@ -23,31 +22,28 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-//Egna Moduler
-//var query = require("./queryHandler");
-
-app.get("/index?q=", function(req, res){
-  console.log("Search started");
-  console.log('id: ' + req.query.id);
-  next();
-});
-//Få den här skiten to go, sen for loop för att lägga till bilder typ, potentiellt ska va i router
-
+//Egna Modulervar query = require("./queryHandler");
 /*
-app.get('/getShit', async function(req, res, next){
-  var q = "SELECT * FROM bilder";
-  var buffer = await query(q);
-  let data = JSON.parse(JSON.stringify(buffer));
-  let test = data[0]["Beskrivning"];
-  console.log(test);
-  res.render('specificView', {variable: test});
+app.get('/', function(req, res){
+  console.log("Search started");
+  //console.log('id: ' + req.query.id);
+  res.send("Hello");
 });
 */
 
-app.use('/', indexRouter);
-app.use('/index', indexRouter);
+
+
+var indexRouter = require('./routes/index');
+var specificViewRouter = require('./routes/specificView');
+//var getShitRouter = require('./routes/getShit')
+
+
+var a = ['/index'];
+app.use(a, indexRouter);
+app.use('/getShit', indexRouter);
 app.use('/specificView', specificViewRouter);
-app.use('/getShit', specificViewRouter);
+//app.use('/getShit', getShitRouter);
+
 
 
 // catch 404 and forward to error handler
