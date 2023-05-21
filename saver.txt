@@ -10,11 +10,19 @@ let data = JSON.parse(JSON.stringify(buffer));
 let test = data[0]["Beskrivning"];
 res.render('index', {image1: test});
 
-Object.keys(buffer).forEach(function(key) {
-    var row = buffer[key];
-    console.log(row.name)
+    var slot = [];
+    for (var i = 0; i<data.length; i++) {
+        //console.log("Data: " + data[0][i]);
+        slot[i] = data[0][i]?.["Titel"];
+        console.log("Sätter in värde " + slot[i]);
+    }
+    if (slot[0] != undefined) {
+        res.render('index', {image: slot[0]});
+    }
+    else {
+        res.render('index', {image: "Inget Resultat"});
+    }    
 });
-
 
           .imageItem
             a(href='/specificView')
@@ -28,4 +36,3 @@ Object.keys(buffer).forEach(function(key) {
           .imageItem
             a(href='/specificView')
               #{image6}
-      // Footer

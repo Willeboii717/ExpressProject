@@ -28,12 +28,12 @@ html(lang='en')
         .gridItemSearch
           form(action="/searchBar", method="get")
             input(type="search", name="someName")
+          #{noResult}
             
       // Bilder
       .imageGrid
-          for val in slot
-          .imageItem 
-            p= val
+        .imageItem #{image[0]}
+        .imageItem #{image[1]}
       // Footer
       .footerMainGrid
         .phoneItem

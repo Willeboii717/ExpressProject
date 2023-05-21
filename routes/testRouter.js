@@ -9,27 +9,22 @@ router.get('/searchbar', async function(req, res, next) {
     var sql = "CALL searchImagebyCategory(?)";
     buffer = await db(sql, search);
     let data = (JSON.stringify(buffer)) ;
-    data = JSON.parse(data); /*
+    data = JSON.parse(data); 
+    var slot = [];
     for (var i = 0; i<data.length; i++) {
-        var slot = [];
-        console.log("Data: " + data[0][i]);
-        slot[i] = data[0][i];
-        console.log("Slot: " + slot[i]);
+        //console.log("Data: " + data[0][i]);
+        slot[i] = data[0][i]?.["Titel"];
+        console.log("Sätter in värde " + slot[i]);
     }
-    if (slot?.["Titel"] != undefined) {
-        res.render('index', {
-                array: 
-                slot[
-                "test1",
-                "test2" ],
-                test: "hello"
-        });
+    var noResult = ["Inget Resultat"];
+    if (slot[0] != undefined) {
+        res.render('index', {image: slot});
     }
+    
     else {
-        res.render('index', {test: "Inget Resultat"});
+        res.render('index', {noResult: noResult});
     }
-    */
-   res.render('index', {array: slot = ["test1", "test2", "test3", "test4", "test5", "test6"]});
+    
 });
 
 module.exports = router;
