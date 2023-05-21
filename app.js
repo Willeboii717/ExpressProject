@@ -22,27 +22,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-//Egna Modulervar query = require("./queryHandler");
-/*
-app.get('/', function(req, res){
-  console.log("Search started");
-  //console.log('id: ' + req.query.id);
-  res.send("Hello");
-});
-*/
-
-
 
 var indexRouter = require('./routes/index');
+var imageResult = require('./routes/imageResult')
 var specificViewRouter = require('./routes/specificView');
-var testRouter = require('./routes/testRouter')
-
 
 
 app.use('/', indexRouter);
 app.use('/index', indexRouter);
-app.use('/specificView', specificViewRouter);
-app.use('/?', testRouter);
+app.use('/?', imageResult);
+app.use('/specificView*', specificViewRouter);
+
 
 
 

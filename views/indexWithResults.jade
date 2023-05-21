@@ -6,8 +6,10 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet', href='/stylesheets/homepage.css')
     link(rel='stylesheet', href='/stylesheets/header.css')
+    link(rel='stylesheet', href='/stylesheets/searchbar.css')
     link(rel='stylesheet', href='/stylesheets/footer.css')
-    link(rel='stylesheet', href='/stylesheets/specificView.css')
+    link(rel='stylesheet', href='/stylesheets/3x3Image.css')
+    link(rel="stylesheet", href="/stylesheets/common.css")
   body
     // Main Grid
     .mainWrapper
@@ -18,22 +20,28 @@ html(lang='en')
         .titleTextItem
           a(href='/index') Bothniabladet
         .uploadAndCartGrid
-          .uploadAndCartItem  Kundvagn 
-      // Content
-      .contentGrid
-        .titleItem #{titel}
-        .imageItem
-          img(src='/images'+'#{image}')
-        .descriptionItem Beskrivning: #{description}
-        .priceItem #{price} kr
-        .cartAndOptionItem
-          .variantItem
-            select#variant(name='variant')
-              option(value='original') Original
-              option(value='röd') Röd
-              option(value='cropped') Cropped
-          .cartItem Lägg till i Kundvagn
-        .detailsItem Fotograf: #{fotograf}
+          .uploadAndCartItem  Kundvagn
+      // Search
+      .searchBar
+        .gridItemSearch
+          form(action="/searchBar", method="get")
+            input(type="search" name="q" placeholder="Sök på en kategori")
+      // Bilder
+      
+      .imageGrid
+            if image[0] == undefined
+                p Inget resultat matchade din sökning
+            else
+                a(href='/specificView'+'#{image[0]}') 
+                    img(src='/images'+'#{image[0]}')
+            if image[1] == undefined
+            else
+                a(href='/specificView'+'#{image[1]}') 
+                    img(src='/images'+'#{image[1]}')
+            if image[2] == undefined
+            else
+                a(href='/images'+'#{image[2]}') 
+                    img(src='#{image[2]}')
       // Footer
       .footerMainGrid
         .phoneItem
@@ -53,4 +61,4 @@ html(lang='en')
           |                 Bothniavägen 5 (Kontor)
           br
           |                 Pressvägen 9 (Lager)
-script(src="/javascripts/searchClientside.js")
+script(src="/javascripts/searchClientside.js") 

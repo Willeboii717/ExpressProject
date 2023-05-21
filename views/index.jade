@@ -16,24 +16,18 @@ html(lang='en')
       // Header
       .headerMainGrid
         .loginItem
-          a(href='/specificView') Login
+          a(href='/') Tillbaka
         .titleTextItem
           a(href='/index') Bothniabladet
         .uploadAndCartGrid
-          .uploadAndCartItem 
-            a(href='/') Ladda Upp 
           .uploadAndCartItem  Kundvagn
       // Search
       .searchBar
         .gridItemSearch
           form(action="/searchBar", method="get")
-            input(type="search", name="someName")
-          #{noResult}
-            
+            input(type="search" name="q" placeholder="Sök på en kategori")
       // Bilder
       .imageGrid
-        .imageItem #{image[0]}
-        .imageItem #{image[1]}
       // Footer
       .footerMainGrid
         .phoneItem
