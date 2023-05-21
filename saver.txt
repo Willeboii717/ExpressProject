@@ -14,3 +14,18 @@ Object.keys(buffer).forEach(function(key) {
     var row = buffer[key];
     console.log(row.name)
 });
+
+
+          .imageItem
+            a(href='/specificView')
+              #{image3}
+          .imageItem
+            a(href='/specificView')
+              #{image4}
+          .imageItem
+            a(href='/specificView')
+              #{image5}
+          .imageItem
+            a(href='/specificView')
+              #{image6}
+      // Footer

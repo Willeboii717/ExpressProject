@@ -31,22 +31,9 @@ html(lang='en')
             
       // Bilder
       .imageGrid
-          .imageItem #{image1}
-          .imageItem
-            a(href='/specificView')
-              #{image2}
-          .imageItem
-            a(href='/specificView')
-              #{image3}
-          .imageItem
-            a(href='/specificView')
-              #{image4}
-          .imageItem
-            a(href='/specificView')
-              #{image5}
-          .imageItem
-            a(href='/specificView')
-              #{image6}
+          for val in slot
+          .imageItem 
+            p= val
       // Footer
       .footerMainGrid
         .phoneItem
