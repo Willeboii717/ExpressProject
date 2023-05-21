@@ -20,18 +20,18 @@ html(lang='en')
         .titleTextItem
           a(href='/index') Bothniabladet
         .uploadAndCartGrid
-          .uploadAndCartItem  Ladda Upp 
+          .uploadAndCartItem 
+            a(href='/') Ladda Upp 
           .uploadAndCartItem  Kundvagn
       // Search
       .searchBar
         .gridItemSearch
-            form(action='/?' method='get')
-              input#query(type='search' name='q' placeholder='Search...' aria-label='Search through site content')
+          form(action="/searchBar", method="get")
+            input(type="search", name="someName")
+            
       // Bilder
       .imageGrid
-          .imageItem
-            a(href='/specificView')
-              #{image1}
+          .imageItem #{image1}
           .imageItem
             a(href='/specificView')
               #{image2}

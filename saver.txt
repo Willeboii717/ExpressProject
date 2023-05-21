@@ -1,0 +1,16 @@
+    var test = await req.query.q;
+    console.log('id: ' + test);
+    res.send(test);
+
+
+//SQL query
+var sql = "SELECT * FROM bilder";
+var buffer = await query(sql);
+let data = JSON.parse(JSON.stringify(buffer));
+let test = data[0]["Beskrivning"];
+res.render('index', {image1: test});
+
+Object.keys(buffer).forEach(function(key) {
+    var row = buffer[key];
+    console.log(row.name)
+});

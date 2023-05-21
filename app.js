@@ -35,14 +35,14 @@ app.get('/', function(req, res){
 
 var indexRouter = require('./routes/index');
 var specificViewRouter = require('./routes/specificView');
-//var getShitRouter = require('./routes/getShit')
+var testRouter = require('./routes/testRouter')
 
 
-var a = ['/index'];
-app.use(a, indexRouter);
-app.use('/getShit', indexRouter);
+
+app.use('/', indexRouter);
+app.use('/index', indexRouter);
 app.use('/specificView', specificViewRouter);
-//app.use('/getShit', getShitRouter);
+app.use('/?', testRouter);
 
 
 
