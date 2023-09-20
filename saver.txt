@@ -1,0 +1,38 @@
+    var test = await req.query.q;
+    console.log('id: ' + test);
+    res.send(test);
+
+
+//SQL query
+var sql = "SELECT * FROM bilder";
+var buffer = await query(sql);
+let data = JSON.parse(JSON.stringify(buffer));
+let test = data[0]["Beskrivning"];
+res.render('index', {image1: test});
+
+    var slot = [];
+    for (var i = 0; i<data.length; i++) {
+        //console.log("Data: " + data[0][i]);
+        slot[i] = data[0][i]?.["Titel"];
+        console.log("Sätter in värde " + slot[i]);
+    }
+    if (slot[0] != undefined) {
+        res.render('index', {image: slot[0]});
+    }
+    else {
+        res.render('index', {image: "Inget Resultat"});
+    }    
+});
+
+          .imageItem
+            a(href='/specificView')
+              #{image3}
+          .imageItem
+            a(href='/specificView')
+              #{image4}
+          .imageItem
+            a(href='/specificView')
+              #{image5}
+          .imageItem
+            a(href='/specificView')
+              #{image6}

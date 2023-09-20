@@ -10,6 +10,9 @@
 
     align-items: center;
     justify-items: center;
+    position: absolute;
+    width: inherit;
+    bottom: 0;
 }
 
 .phoneItem {

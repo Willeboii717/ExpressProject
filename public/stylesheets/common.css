@@ -1,0 +1,35 @@
+body {
+  background-color: #BDEDE0;
+  overflow-x: hidden;
+  
+  box-sizing: border-box;
+  padding: 0.5em;
+  margin: 0;
+  text-align: center;
+}
+
+.mainWrapper {
+  display: grid;
+  
+  grid-template-columns: 1fr;
+  grid-template-rows:  repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+img { /* Specification for all images, makes so they fit into a grid item and doesn't scale down */
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-radius: 3%;
+
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+

@@ -9,35 +9,25 @@ html(lang='en')
     link(rel='stylesheet', href='/stylesheets/searchbar.css')
     link(rel='stylesheet', href='/stylesheets/footer.css')
     link(rel='stylesheet', href='/stylesheets/3x3Image.css')
+    link(rel="stylesheet", href="/stylesheets/common.css")
   body
     // Main Grid
     .mainWrapper
       // Header
       .headerMainGrid
         .loginItem
-          a(href='html\notIndex.html') Login
-        .titleTextItem  Bothniabladet 
+          a(href='/') Tillbaka
+        .titleTextItem
+          a(href='/index') Bothniabladet
         .uploadAndCartGrid
-          .uploadAndCartItem  Ladda Upp 
-          .uploadAndCartItem  Kundvagn 
+          .uploadAndCartItem  Kundvagn
       // Search
       .searchBar
         .gridItemSearch
-          input(type='text' placeholder='Sök på en bild!')
+          form(action="/searchBar", method="get")
+            input(type="search" name="q" placeholder="Sök på en kategori")
       // Bilder
-      .imgaeGrid
-        .imageItem
-          img(src='/images/nature2.jpg' alt='Image 1')
-        .imageItem
-          img(src='/images/nature3.jpg' alt='Image 1')
-        .imageItem
-          img(src='/images/nature4.jpg' alt='Image 1')
-        .imageItem
-          img(src='/images/nature5.jpg' alt='Image 1')
-        .imageItem
-          img(src='/images/nature6.jpg' alt='Image 1')
-        .imageItem
-          img(src='/images/nature2.jpg' alt='Image 1')
+      .imageGrid
       // Footer
       .footerMainGrid
         .phoneItem
@@ -57,3 +47,4 @@ html(lang='en')
           |                 Bothniavägen 5 (Kontor)
           br
           |                 Pressvägen 9 (Lager)
+script(src="/javascripts/searchClientside.js") 

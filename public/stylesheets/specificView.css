@@ -1,0 +1,99 @@
+.contentGrid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, fit);
+    grid-gap: 0.5em;
+
+    align-items: center;
+
+    width: 100vw;
+    padding: 0.5%;
+
+}
+
+.titleItem {
+    background-color: #e0e6f6;
+    border: 1.5px solid black;
+    border-radius: 1em;
+
+    font-size: xx-large;
+    font-weight: bolder;
+    
+
+    width: 50%;
+    justify-self: center;
+
+    grid-column: 1 / span 3;
+}
+
+.imageItem {
+    border: 1.5px solid black;
+    border-radius: 4%;
+
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 2;
+}
+
+.descriptionItem {
+    border: 1.5px solid black;
+
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 1;
+
+    font-size: 1.5vw;
+}
+
+.priceItem {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.detailsItem {
+    border: 1.5px solid black;
+
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+
+.cartAndOptionItem {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+
+    align-items: center;
+    grid-row-gap: 50%;
+}
+
+.cartItem {
+    border: 1.5px solid black;
+    background-color: #55c3a0;
+
+    border-radius: 1em;
+}
+
+.variantItem > select {
+    background-color: #55c3a0;
+}
+
+
+img  { /* Specification for all images, makes so they fit into a grid item and doesn't scale down */
+   
+    width: 100%;
+    height: 50vh;
+    display: block;
+    object-fit: cover;
+    
+    border-radius: 4%;
+  }
+
+body {
+    background-color: #BDEDE0;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+    padding: 0em;
+    margin: 0;
+
+    text-align: center;
+}

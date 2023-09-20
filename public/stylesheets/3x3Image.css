@@ -1,23 +1,6 @@
-.imgaeGrid {
+.imageGrid {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3em;
-
-    
-}
-
-
-
-img { /* Specification for all images, makes so they fit into a grid item and doesn't scale down */
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-
-    border: 2px solid rgba(0, 0, 0, 0.8);
-    border-radius: 3%;
-
-    margin-left: 2%;
-    margin-right: 2%;
+    grid-gap: 3em; 
 }
